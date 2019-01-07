@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Desktop
+namespace DesktopWin
 {
     /// <summary>
     /// The main class.
@@ -13,7 +13,7 @@ namespace Desktop
         [STAThread]
         static void Main()
         {
-            using (var game = new Desktop())
+            using (var game = new DesktopGLGame())
                 game.Run();
         }
     }

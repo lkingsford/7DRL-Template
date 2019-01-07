@@ -3,31 +3,48 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "Desktop\Desktop.csproj", "{49D92D53-AAE1-4E7C-A547-3B8FB2144659}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Game", "Game\Game.shproj", "{3459F897-5E22-467D-B2E3-7B503E641B5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E45D7D37-5519-4F81-96EE-D2BA9937414A}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		Content\Content.mgcb = Content\Content.mgcb
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopWin", "DesktopWin\DesktopWin.csproj", "{47AD3D4E-002E-4B43-81DD-8AE290372C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopGL", "DesktopGL\DesktopGL.csproj", "{49D92D53-AAE1-4E7C-A547-3B8FB2144659}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Game\Game.projitems*{3459f897-5e22-467d-b2e3-7b503e641b5a}*SharedItemsImports = 13
+		Game\Game.projitems*{47ad3d4e-002e-4b43-81dd-8ae290372c42}*SharedItemsImports = 4
 		Game\Game.projitems*{49d92d53-aae1-4e7c-a547-3b8fb2144659}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Debug|Any CPU.Build.0 = Debug|x86
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Debug|x86.ActiveCfg = Debug|x86
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Debug|x86.Build.0 = Debug|x86
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Release|Any CPU.ActiveCfg = Release|x86
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Release|x86.ActiveCfg = Release|x86
+		{47AD3D4E-002E-4B43-81DD-8AE290372C42}.Release|x86.Build.0 = Release|x86
 		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Debug|x86.Build.0 = Debug|Any CPU
 		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Release|x86.ActiveCfg = Release|Any CPU
+		{49D92D53-AAE1-4E7C-A547-3B8FB2144659}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

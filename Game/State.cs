@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.Input.InputListeners;
+using MonoGame.Extended.NuclexGui;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,19 @@ namespace Game
     /// </summary>
     class State
     {
+
+        public State()
+        {
+            if (gui == null)
+            {
+                inputListener = new InputListenerComponent(GameApp);
+                inputManager = new MonoGame.Extended.NuclexGui.GuiInputService(inputListener);
+                gui = new GuiManager(GameApp.Services, inputManager);
+                gui.Initialize();
+            }
+            gui.Screen = new GuiScreen();
+        }
+
         /// <summary>
         /// Application wide sprite batch to use for drawing operations
         /// </summary>
@@ -43,6 +58,15 @@ namespace Game
         /// Height of the screen, per Monogame.Game
         /// </summary>
         static public int ScreenHeight;
+
+        static protected InputListenerComponent inputListener;
+        static protected GuiInputService inputManager;
+        static protected GuiManager gui;
+
+        /// <summary>
+        /// The Monogame Game
+        /// </summary>
+        static public Microsoft.Xna.Framework.Game GameApp;
 
         /// <summary>
         /// Run logic for this state - including input
