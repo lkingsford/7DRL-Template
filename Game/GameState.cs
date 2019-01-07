@@ -1,28 +1,30 @@
 ﻿using Game;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.NuclexGui;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Desktop
+namespace Game
 {
     class GameState : State
     {
         /// <summary>
         /// The game being played
         /// </summary>
-        protected Game.Game G;
+        protected Game G;
 
         /// <summary>
         /// Create a game interface from a given game
         /// </summary>
         /// <param name="Game">Game object that is being played</param>
-        public GameState(Game.Game Game)
+        public GameState(Game Game)
         {
             this.G = Game;
+            gui.Screen = new GuiScreen();
         }
 
         /// <summary>

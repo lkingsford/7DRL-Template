@@ -5,12 +5,12 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Desktop
+namespace DesktopWin
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Desktop : Microsoft.Xna.Framework.Game
+    public class DesktopWinGame : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -21,7 +21,7 @@ namespace Desktop
         /// </summary>
         List<State> States = new List<State>();
 
-        public Desktop()
+        public DesktopWinGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -58,6 +58,8 @@ namespace Desktop
 
             // Allow states to manipulate states
             State.StateStack = States;
+
+            State.GameApp = this;
 
             // Create a new game, and make the UI on top of the stack
             States.Add(new GameState(new Game.Game()));
